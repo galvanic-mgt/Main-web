@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galvanic Portfolio | Projects by Category</title>
+    <meta
+      name="description"
+      content="Browse Galvanic projects by category: interactive games, events, mall decor, pop-ups and exhibition booths."
+    />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="styles.css?v=20260628-orientation" />
+  </head>
+  <body class="portfolio-page">
+    <header class="site-header solid-header">
+      <a class="brand" href="index.html" aria-label="Galvanic home">
+        <span class="brand-mark">G</span>
+        <span>GALVANIC</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html#play">Play</a>
+        <a href="portfolio.html">Work</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="portfolio-hero section-pad">
+        <div>
+          <div class="section-kicker">Portfolio</div>
+          <h1>Work by category.</h1>
+        </div>
+        <p>
+          Use the thumbnail categories first, then open a project page for the full photo set.
+          The detailed photos live there so the homepage can stay sharp.
+        </p>
+      </section>
+
+      <section class="portfolio-browser section-pad" aria-labelledby="portfolio-title">
+        <div class="category-dock" id="portfolioCategories" aria-label="Portfolio category filters"></div>
+        <div class="portfolio-browser-head">
+          <div>
+            <div class="section-kicker" id="activeCategoryKicker">All work</div>
+            <h2 id="portfolio-title">Choose a project.</h2>
+          </div>
+          <p id="activeCategoryDescription">Every project in the portfolio archive.</p>
+        </div>
+        <div class="project-index" id="projectIndex"></div>
+      </section>
+    </main>
+
+    <script src="gallery-data.js?v=20260628-orientation"></script>
+    <script src="script.js?v=20260628-orientation"></script>
+  </body>
+</html>

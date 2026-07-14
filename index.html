@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galvanic | Playable Events, Decoration & Interactive Experiences</title>
+    <meta
+      name="description"
+      content="Galvanic is a Hong Kong marketing agency creating interactive games, digital shows, mall decorations, pop-ups, roadshows and on-site event production."
+    />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="styles.css?v=20260628-orientation" />
+  </head>
+  <body>
+    <div class="cursor-light" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Galvanic home">
+        <span class="brand-mark">G</span>
+        <span>GALVANIC</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#play">Play</a>
+        <a href="portfolio.html">Work</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <canvas id="signalCanvas" class="signal-canvas" aria-hidden="true"></canvas>
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/portfolio/adidas-sports-base/01-image49.jpg" alt="" />
+        </div>
+        <div class="hero-scrim" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <p class="eyebrow">Hong Kong marketing agency</p>
+          <h1 id="hero-title">GALVANIC</h1>
+          <p class="hero-copy">
+            We design playable booths, photogenic builds and live event systems
+            that turn mall traffic into attention.
+          </p>
+          <div class="hero-actions" aria-label="Hero actions">
+            <a class="primary-action" href="#play">
+              <span aria-hidden="true">&#9658;</span>
+              Play the site
+            </a>
+            <a class="secondary-action" href="portfolio.html">
+              <span aria-hidden="true">&#8594;</span>
+              Browse work
+            </a>
+          </div>
+        </div>
+        <div class="collision-strip" aria-label="Galvanic capabilities">
+          <span>Interactive games</span>
+          <span>Projection mapping</span>
+          <span>Pop-ups</span>
+          <span>Mall decor</span>
+          <span>Roadshows</span>
+          <span>Event operation</span>
+        </div>
+      </section>
+
+      <section class="bridge section-pad" aria-labelledby="bridge-title">
+        <div class="section-kicker">The conflict becomes the concept</div>
+        <h2 id="bridge-title">Physical spectacle and playable technology are the same business when the product is attention.</h2>
+        <p>
+          Decoration gets people to look. Event production gets them to gather.
+          Interactive programming gives them a reason to stay, compete, share and come back.
+          Galvanic combines all three into one visitor journey.
+        </p>
+      </section>
+
+      <section id="play" class="play-lab section-pad" aria-labelledby="play-title">
+        <div class="play-copy">
+          <div class="section-kicker">Playable portfolio</div>
+          <h2 id="play-title">Whack the crowd awake.</h2>
+          <p>
+            A tiny version of the mall game booth: fast rounds, bright hits,
+            and a leaderboard stored in this browser.
+          </p>
+          <div class="play-stats" aria-live="polite">
+            <span><strong id="moleScore">0</strong> Score</span>
+            <span><strong id="moleTimer">25</strong> Time</span>
+            <span><strong id="moleStreak">0</strong> Streak</span>
+          </div>
+          <div class="game-controls">
+            <input id="playerName" maxlength="12" autocomplete="nickname" placeholder="Your name" aria-label="Leaderboard name" />
+            <button class="primary-action" id="startMoleGame" type="button">
+              <span aria-hidden="true">??/span>
+              Start round
+            </button>
+          </div>
+        </div>
+        <div class="play-stage mole-cabinet">
+          <div class="cabinet-top">
+            <span>LOK FU PLAZA x T.O.P.</span>
+            <strong>WHACK-A-MOLE</strong>
+          </div>
+          <div class="mole-board" id="moleBoard" aria-label="Mini whack-a-mole game board"></div>
+          <div class="leaderboard-panel">
+            <div>
+              <span>Local leaderboard</span>
+              <button id="clearLeaderboard" type="button">Clear</button>
+            </div>
+            <ol id="leaderboardList"></ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="work section-pad" aria-labelledby="work-title">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Selected work</div>
+            <h2 id="work-title">Start with the world they need.</h2>
+          </div>
+          <a class="portfolio-link" href="portfolio.html">Open full portfolio</a>
+        </div>
+
+        <div class="category-strip" id="homeCategories" aria-label="Portfolio categories"></div>
+
+        <div class="case-grid" id="caseGrid">
+          <article class="case-card" data-type="interactive decor">
+            <img src="assets/whack-a-mole-arcade.jpg" alt="Whack-a-mole arcade game installation" />
+            <div>
+              <p>LOK FU Plaza & T.O.P.</p>
+              <h3>Whack-a-mole simulator game</h3>
+              <span>2D animation, touch sensors, leaderboards, remote updates, redemption booth.</span>
+            </div>
+          </article>
+          <article class="case-card" data-type="interactive">
+            <img src="assets/portfolio/surfing-simulator/05-image40.jpg" alt="Surfing simulator game screen" />
+            <div>
+              <p>Surfing Simulator</p>
+              <h3>Surfing simulator</h3>
+              <span>Game mechanism design, 3D environment, product visuals and online ranking.</span>
+            </div>
+          </article>
+          <article class="case-card" data-type="event interactive">
+            <img src="assets/portfolio/adidas-sports-base/02-image48.jpg" alt="Adidas Sports Base court activation" />
+            <div>
+              <p>Hong Kong Observation Wheel</p>
+              <h3>Adidas Sports Base</h3>
+              <span>Production management for an outdoor sports activation environment.</span>
+            </div>
+          </article>
+          <article class="case-card" data-type="interactive event">
+            <img src="assets/basehall-visualizer-booth.jpg" alt="BaseHall live music visualizer interactive booth" />
+            <div>
+              <p>BASEHALL</p>
+              <h3>Body motion visualizer</h3>
+              <span>Interactive demo with Flipdot, music response, camera sensing and show control.</span>
+            </div>
+          </article>
+          <article class="case-card" data-type="event decor">
+            <img src="assets/mira-christmas-showcase.jpg" alt="Mira Place Christmas installation with pink cafe decor" />
+            <div>
+              <p>Mira Place x Le Creuset x J Lou</p>
+              <h3>Christmas KOL event</h3>
+              <span>Proposal, artiste management, sponsor invitation, chef invitation and event management.</span>
+            </div>
+          </article>
+          <article class="case-card" data-type="decor event">
+            <img src="assets/soho-west-christmas.jpg" alt="SOHO WEST Christmas decoration sign" />
+            <div>
+              <p>SOHO WEST</p>
+              <h3>Christmas decoration</h3>
+              <span>Proposal write-up and production for a festive mall environment.</span>
+            </div>
+          </article>
+          <article class="case-card" data-type="event">
+            <img src="assets/tumi-house.jpg" alt="TUMI House event at IFC" />
+            <div>
+              <p>TUMI House @ IFC</p>
+              <h3>Brand house experience</h3>
+              <span>Premium product display, spatial flow and on-site event support.</span>
+            </div>
+          </article>
+          <article class="case-card" data-type="event decor">
+            <img src="assets/portfolio/cullinan-sky-mall/01-image118.jpg" alt="Cullinan Sky Mall event decor" />
+            <div>
+              <p>Cullinan Sky Mall, Kai Tak</p>
+              <h3>Mall production campaign</h3>
+              <span>Production, props sourcing, promoter recruitment, 2D design and management.</span>
+            </div>
+          </article>
+          <article class="case-card" data-type="event">
+            <img src="assets/mira-marathon.jpg" alt="Mira Place marathon promotion event" />
+            <div>
+              <p>Standard Chartered Marathon</p>
+              <h3>Mira Place promotion</h3>
+              <span>Props, outfits, models, event management and photography.</span>
+            </div>
+          </article>
+          <article class="case-card" data-type="decor event">
+            <img src="assets/glycel-pop-up-render.jpg" alt="GLYCEL Tokyo pop-up design render" />
+            <div>
+              <p>GLYCEL Tokyo</p>
+              <h3>Pop-up design and build</h3>
+              <span>3D design and production management for a polished retail environment.</span>
+            </div>
+          </article>
+          <article class="case-card" data-type="event decor">
+            <img src="assets/portfolio/how2work-complexcon/01-image103.jpg" alt="How2Work Complex Con Hong Kong display" />
+            <div>
+              <p>AsiaWorld-Expo / Hong Kong</p>
+              <h3>How2Work operations</h3>
+              <span>Activity operation, cashier duties and crowd control at AsiaWorld-Expo.</span>
+            </div>
+          </article>
+          <article class="case-card" data-type="interactive event">
+            <img src="assets/projection-mapping-stage.jpg" alt="Projection mapping stage show" />
+            <div>
+              <p>Digital interactive & shows</p>
+              <h3>Projection mapping</h3>
+              <span>3D design, animation, mapping and stage management for live visual impact.</span>
+            </div>
+          </article>
+          <article class="case-card" data-type="decor event">
+            <img src="assets/hugo-boss-hktdc.jpg" alt="HUGO BOSS exhibition booth at HKTDC" />
+            <div>
+              <p>HUGO BOSS @ HKTDC</p>
+              <h3>Exhibition production</h3>
+              <span>On-site brand environment and event execution for trade-show traffic.</span>
+            </div>
+          </article>
+          <article class="case-card" data-type="decor event">
+            <img src="assets/portfolio/chuangs-london-plaza/01-image170.jpg" alt="Chuang's London Plaza CNY decoration" />
+            <div>
+              <p>Chuang's London Plaza, Tsim Sha Tsui</p>
+              <h3>CNY decoration</h3>
+              <span>Props sourcing, 3D design, production management and animation editing.</span>
+            </div>
+          </article>
+          <article class="case-card" data-type="event decor">
+            <img src="assets/portfolio/inada-exhibition/01-image191.jpg" alt="INADA exhibition booth at HKTDC" />
+            <div>
+              <p>INADA @ HKTDC</p>
+              <h3>Exhibition production</h3>
+              <span>Design, production and exhibition booth build.</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="services" class="services section-pad" aria-labelledby="services-title">
+        <div class="section-kicker">What Galvanic can own</div>
+        <h2 id="services-title">One team for the booth, the screen, the crowd and the scoreboard.</h2>
+        <div class="service-map">
+          <div class="service-row">
+            <span>01</span>
+            <h3>Digital interactive</h3>
+            <p>Game programming, sensing, calibration, live data, leaderboards, remote updates and redemption logic.</p>
+          </div>
+          <div class="service-row">
+            <span>02</span>
+            <h3>Shows and media</h3>
+            <p>Projection mapping, 3D design, animation, stage visuals and interactive demos.</p>
+          </div>
+          <div class="service-row">
+            <span>03</span>
+            <h3>Events and operations</h3>
+            <p>Roadshows, crowd control, promoter recruitment, scripts, models, KOLs, guests and on-site management.</p>
+          </div>
+          <div class="service-row">
+            <span>04</span>
+            <h3>Decoration and production</h3>
+            <p>Mall installations, Christmas and CNY decor, props sourcing, 2D and 3D design, pop-up builds.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof section-pad" aria-labelledby="proof-title">
+        <div>
+          <div class="section-kicker">Trusted across worlds</div>
+          <h2 id="proof-title">Luxury, malls, sports, F&B, character IP and tech activations can live on the same site.</h2>
+        </div>
+        <div class="logo-cloud" aria-label="Clients and project brands from the portfolio">
+          <span>Adidas</span>
+          <span>BASEHALL</span>
+          <span>Mira Place</span>
+          <span>TUMI</span>
+          <span>How2Work</span>
+          <span>GLYCEL</span>
+          <span>HUGO BOSS</span>
+          <span>INADA</span>
+          <span>SOHO WEST</span>
+          <span>Cullinan Sky Mall</span>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section-pad" aria-labelledby="contact-title">
+        <div class="contact-image">
+          <img src="assets/mira-team-decoration.jpg" alt="Galvanic mall decoration project team photo" />
+        </div>
+        <div class="contact-copy">
+          <div class="section-kicker">Stay in touch</div>
+          <h2 id="contact-title">Bring the idea. Galvanic can make it physical, playable, or both.</h2>
+          <p>Ronald Yue, Managing Director</p>
+          <a href="tel:+85269070387" class="contact-link">+852 6907 0387</a>
+          <address>
+            9/F, Amtel Building, 148 Des Voeux Road Central, Central, Hong Kong
+          </address>
+        </div>
+      </section>
+    </main>
+
+    <script src="gallery-data.js?v=20260628-orientation"></script>
+    <script src="script.js?v=20260628-orientation"></script>
+  </body>
+</html>

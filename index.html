@@ -8,15 +8,14 @@
       name="description"
       content="Galvanic is a Hong Kong marketing agency creating interactive games, digital shows, mall decorations, pop-ups, roadshows and on-site event production."
     />
-    <link rel="icon" href="assets/favicon.png" />
-    <link rel="stylesheet" href="styles.css?v=20260628-orientation" />
+    <link rel="icon" href="assets/galvanic-logo.png" />
+    <link rel="preload" href="assets/galvanic-logo.png" as="image" />
+    <link rel="stylesheet" href="styles.css?v=20260905-nine-slots" />
   </head>
   <body>
-    <div class="cursor-light" aria-hidden="true"></div>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Galvanic home">
-        <span class="brand-mark">G</span>
-        <span>GALVANIC</span>
+        <img class="brand-logo" src="assets/galvanic-logo.png" alt="Galvanic" width="922" height="773" />
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#play">Play</a>
@@ -27,28 +26,32 @@
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <canvas id="signalCanvas" class="signal-canvas" aria-hidden="true"></canvas>
-        <div class="hero-media" aria-hidden="true">
-          <img src="assets/portfolio/adidas-sports-base/01-image49.jpg" alt="" />
+      <div class="galaxy-scroll">
+      <section class="hero galaxy-hero" aria-labelledby="hero-title">
+        <canvas id="galaxyCanvas" class="galaxy-canvas" aria-hidden="true"></canvas>
+        <div class="galaxy-stage" aria-hidden="true">
+          <img class="galaxy-fallback" src="assets/galvanic-logo.png" alt="" width="922" height="773" />
         </div>
-        <div class="hero-scrim" aria-hidden="true"></div>
         <div class="hero-inner">
-          <p class="eyebrow">Hong Kong marketing agency</p>
-          <h1 id="hero-title">GALVANIC</h1>
-          <p class="hero-copy">
-            We design playable booths, photogenic builds and live event systems
-            that turn mall traffic into attention.
-          </p>
-          <div class="hero-actions" aria-label="Hero actions">
-            <a class="primary-action" href="#play">
-              <span aria-hidden="true">&#9658;</span>
-              Play the site
-            </a>
-            <a class="secondary-action" href="portfolio.html">
-              <span aria-hidden="true">&#8594;</span>
-              Browse work
-            </a>
+          <div class="hero-heading">
+            <p class="eyebrow">Hong Kong marketing agency</p>
+            <h1 id="hero-title">GALVANIC</h1>
+          </div>
+          <div class="hero-summary">
+            <p class="hero-copy">
+              We design playable booths, photogenic builds and live event systems
+              that turn mall traffic into attention.
+            </p>
+            <div class="hero-actions" aria-label="Hero actions">
+              <a class="primary-action" href="#play">
+                <span aria-hidden="true">&#9658;</span>
+                Play the site
+              </a>
+              <a class="secondary-action" href="portfolio.html">
+                <span aria-hidden="true">&#8594;</span>
+                Browse work
+              </a>
+            </div>
           </div>
         </div>
         <div class="collision-strip" aria-label="Galvanic capabilities">
@@ -60,6 +63,7 @@
           <span>Event operation</span>
         </div>
       </section>
+      </div>
 
       <section class="bridge section-pad" aria-labelledby="bridge-title">
         <div class="section-kicker">The conflict becomes the concept</div>
@@ -94,7 +98,6 @@
         </div>
         <div class="play-stage mole-cabinet">
           <div class="cabinet-top">
-            <span>LOK FU PLAZA x T.O.P.</span>
             <strong>WHACK-A-MOLE</strong>
           </div>
           <div class="mole-board" id="moleBoard" aria-label="Mini whack-a-mole game board"></div>
@@ -306,6 +309,7 @@
     </main>
 
     <script src="gallery-data.js?v=20260628-orientation"></script>
-    <script src="script.js?v=20260628-orientation"></script>
+    <script src="galaxy.js?v=20260905-flow-galaxy"></script>
+    <script src="script.js?v=20260905-nine-slots"></script>
   </body>
 </html>

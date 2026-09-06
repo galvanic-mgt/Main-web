@@ -81,15 +81,10 @@ button {
   letter-spacing: 0.08em;
 }
 
-.brand-mark {
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  color: var(--ink);
-  background: var(--cyan);
-  font-weight: 1000;
-  transform: skewX(-11deg);
+.brand-logo {
+  width: 80px;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .site-nav {
@@ -867,7 +862,7 @@ h1 {
 
 .mole-board {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(10px, 2vw, 16px);
 }
 
@@ -2020,5 +2015,304 @@ address {
   .cursor-light,
   .signal-canvas {
     display: none;
+  }
+}
+
+/* The supplied Galvanic symbol becomes a constellation in the opening sky. */
+.galaxy-scroll {
+  position: relative;
+  background: #03070b;
+}
+
+.galaxy-scroll.is-scroll-enabled {
+  height: calc(var(--galaxy-height, 100svh) + 120svh);
+}
+
+.is-scroll-enabled .galaxy-hero {
+  position: sticky;
+  top: min(0px, calc(100svh - var(--galaxy-height, 100svh)));
+}
+
+.is-scroll-enabled .hero-inner {
+  opacity: var(--galaxy-copy-opacity, 1);
+  transform: translateY(var(--galaxy-copy-y, 0px));
+}
+
+.is-scroll-enabled .collision-strip {
+  opacity: var(--galaxy-copy-opacity, 1);
+}
+
+.galaxy-scroll + .bridge {
+  position: relative;
+  z-index: 3;
+  color: #f4f8fa;
+  background: linear-gradient(#03070b, var(--night));
+}
+
+.galaxy-scroll.is-scroll-enabled + .bridge {
+  margin-top: -62svh;
+  padding-top: clamp(190px, 32svh, 380px);
+  padding-bottom: clamp(90px, 12svh, 160px);
+  background: linear-gradient(
+    to bottom,
+    rgba(3, 7, 11, 0) 0,
+    rgba(3, 7, 11, 0.7) 20svh,
+    #03070b 38svh,
+    var(--night) 100%
+  );
+}
+
+.galaxy-scroll + .bridge .section-kicker {
+  color: #67cbd6;
+}
+
+.galaxy-scroll + .bridge p {
+  color: #a9bbc6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .galaxy-scroll.is-scroll-enabled {
+    height: auto;
+  }
+
+  .is-scroll-enabled .galaxy-hero {
+    position: relative;
+    top: auto;
+  }
+
+  .galaxy-scroll.is-scroll-enabled + .bridge {
+    margin-top: 0;
+    padding-top: clamp(74px, 10vw, 132px);
+    background: linear-gradient(#03070b, var(--night));
+  }
+}
+
+.site-header {
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.brand {
+  flex-shrink: 0;
+}
+
+.site-nav {
+  font-size: 0.9375rem;
+}
+
+.galaxy-hero {
+  min-height: max(820px, 100svh);
+  padding: 120px clamp(24px, 5vw, 72px) 106px;
+  background: #03070b;
+  color: #f4f8fa;
+}
+
+.galaxy-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.galaxy-stage {
+  position: absolute;
+  top: 108px;
+  right: 10%;
+  bottom: 274px;
+  left: 10%;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.galaxy-fallback {
+  width: 100%;
+  height: 100%;
+  max-height: 440px;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+.galaxy-ready .galaxy-fallback {
+  visibility: hidden;
+}
+
+.galaxy-hero .hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 56px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.galaxy-hero .eyebrow {
+  margin-bottom: 20px;
+  color: #8fadb9;
+  font-size: 0.875rem;
+  letter-spacing: 0.14em;
+}
+
+.galaxy-hero h1 {
+  margin-bottom: 0;
+  font-size: clamp(2.8rem, 6.1vw, 6.5rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.galaxy-hero .hero-summary {
+  max-width: 500px;
+  justify-self: end;
+}
+
+.galaxy-hero .hero-copy {
+  margin-bottom: 22px;
+  color: #b2c1c9;
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.galaxy-hero .hero-actions {
+  gap: 12px;
+}
+
+.galaxy-hero .primary-action,
+.galaxy-hero .secondary-action {
+  min-height: 46px;
+  border-radius: 3px;
+  padding: 0 20px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+.galaxy-hero .primary-action {
+  color: #031014;
+  background: #32b9c6;
+  border-color: #32b9c6;
+}
+
+.galaxy-hero .primary-action:hover {
+  background: #7ee1e8;
+  border-color: #7ee1e8;
+}
+
+.galaxy-hero .secondary-action {
+  background: transparent;
+  border-color: #52606a;
+}
+
+.galaxy-hero .secondary-action:hover {
+  background: #15232c;
+  border-color: #94acb9;
+}
+
+.galaxy-hero .collision-strip {
+  z-index: 2;
+  background: rgba(3, 7, 11, 0.8);
+  border-top-color: #1e2b34;
+}
+
+.galaxy-hero .collision-strip span {
+  color: #8ea3af;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #7ee1e8;
+  outline-offset: 5px;
+}
+
+@media (max-width: 980px) {
+  .galaxy-hero .hero-inner {
+    gap: 30px;
+  }
+
+  .galaxy-hero .hero-actions {
+    gap: 8px;
+  }
+
+  .galaxy-hero .primary-action,
+  .galaxy-hero .secondary-action {
+    padding: 0 14px;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+  }
+
+  .brand-logo {
+    width: 58px;
+  }
+
+  .site-nav {
+    gap: 12px;
+    font-size: 0.875rem;
+  }
+
+  .galaxy-hero {
+    min-height: max(840px, 100svh);
+    padding: 420px 24px 92px;
+  }
+
+  .galaxy-stage {
+    top: 116px;
+    right: 7%;
+    bottom: auto;
+    left: 7%;
+    height: 280px;
+  }
+
+  .galaxy-hero .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .galaxy-hero .eyebrow {
+    margin-bottom: 12px;
+    font-size: 0.8125rem;
+    letter-spacing: 0.1em;
+  }
+
+  .galaxy-hero h1 {
+    font-size: clamp(2.75rem, 11vw, 4.5rem);
+  }
+
+  .galaxy-hero .hero-summary {
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  .galaxy-hero .hero-copy {
+    max-width: 440px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+
+  .galaxy-hero .hero-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .galaxy-hero .primary-action,
+  .galaxy-hero .secondary-action {
+    width: auto;
+    flex: 1 1 auto;
+    padding: 0 12px;
   }
 }
